@@ -1,0 +1,182 @@
+[
+  {
+    "title": "ChatGPT for Robotics: Design Principles and Model Abilities",
+    "doi": "10.1109/access.2024.3387941",
+    "url": "https://doi.org/10.1109/access.2024.3387941",
+    "status": 202,
+    "venue": "IEEE Access",
+    "year": 2024,
+    "match": 1
+  },
+  {
+    "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",
+    "doi": "arXiv:2204.01691",
+    "url": "https://arxiv.org/abs/2204.01691",
+    "status": 200,
+    "venue": "arXiv preprint",
+    "year": "",
+    "match": "arxiv-fallback"
+  },
+  {
+    "title": "Code as Policies: Language Model Programs for Embodied Control",
+    "doi": "10.1109/icra48891.2023.10160591",
+    "url": "https://doi.org/10.1109/icra48891.2023.10160591",
+    "status": 202,
+    "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+    "year": 2023,
+    "match": 1
+  },
+  {
+    "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+    "doi": "arXiv:2307.15818",
+    "url": "https://arxiv.org/abs/2307.15818",
+    "status": 200,
+    "venue": "arXiv preprint",
+    "year": "",
+    "match": "arxiv-fallback"
+  },
+  {
+    "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
+    "doi": "arXiv:2212.06817",
+    "url": "https://arxiv.org/abs/2212.06817",
+    "status": 200,
+    "venue": "arXiv preprint",
+    "year": "",
+    "match": "arxiv-fallback"
+  },
+  {
+    "title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+    "doi": "10.36227/techrxiv.176800904.47969417/v1",
+    "url": "https://doi.org/10.36227/techrxiv.176800904.47969417/v1",
+    "status": 403,
+    "venue": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "year": 2026,
+    "match": 0.6
+  },
+  {
+    "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+    "doi": "10.1109/access.2025.3609980",
+    "url": "https://doi.org/10.1109/access.2025.3609980",
+    "status": 202,
+    "venue": "IEEE Access",
+    "year": 2025,
+    "match": 1
+  },
+  {
+    "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+    "doi": "10.15607/rss.2023.xix.026",
+    "url": "https://doi.org/10.15607/rss.2023.xix.026",
+    "status": 200,
+    "venue": "Robotics: Science and Systems XIX",
+    "year": 2023,
+    "match": 1
+  },
+  {
+    "title": "Champion-level drone racing using deep reinforcement learning",
+    "doi": "10.1038/s41586-023-06419-4",
+    "url": "https://doi.org/10.1038/s41586-023-06419-4",
+    "status": 200,
+    "venue": "Nature",
+    "year": 2023,
+    "match": 1
+  },
+  {
+    "title": "Learning high-speed flight in the wild",
+    "doi": "10.1126/scirobotics.abg5810",
+    "url": "https://doi.org/10.1126/scirobotics.abg5810",
+    "status": 403,
+    "venue": "Science Robotics",
+    "year": 2021,
+    "match": 1
+  },
+  {
+    "title": "OmniDrones: An Efficient and Flexible Platform for Reinforcement Learning in Drone Control",
+    "doi": "10.1109/lra.2024.3356168",
+    "url": "https://doi.org/10.1109/lra.2024.3356168",
+    "status": 202,
+    "venue": "IEEE Robotics and Automation Letters",
+    "year": 2024,
+    "match": 0.92
+  },
+  {
+    "title": "Aerial Gym Simulator: A Framework for Highly Parallelized Simulation of Aerial Robots",
+    "doi": "10.1109/lra.2025.3548507",
+    "url": "https://doi.org/10.1109/lra.2025.3548507",
+    "status": 202,
+    "venue": "IEEE Robotics and Automation Letters",
+    "year": 2025,
+    "match": 1
+  },
+  {
+    "title": "AerialVLN: Vision-and-Language Navigation for UAVs",
+    "doi": "10.1109/iccv51070.2023.01411",
+    "url": "https://doi.org/10.1109/iccv51070.2023.01411",
+    "status": 202,
+    "venue": "2023 IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "year": 2023,
+    "match": 1
+  },
+  {
+    "title": "CityNavAgent: Aerial Vision-and-Language Navigation with Hierarchical Semantic Planning and Global Memory",
+    "doi": "10.18653/v1/2025.acl-long.1511",
+    "url": "https://doi.org/10.18653/v1/2025.acl-long.1511",
+    "status": 200,
+    "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    "year": 2025,
+    "match": 1
+  },
+  {
+    "title": "OpenFly: A Versatile Toolchain and Large-scale Benchmark for Aerial Vision-Language Navigation",
+    "doi": "arXiv:2502.18041",
+    "url": "https://arxiv.org/abs/2502.18041",
+    "status": 200,
+    "venue": "arXiv preprint",
+    "year": "",
+    "match": "arxiv-fallback"
+  },
+  {
+    "title": "LLVM-drone: A synergistic framework integrating large language models and vision models for visual tasks in unmanned aerial vehicles",
+    "doi": "10.1016/j.knosys.2025.114190",
+    "url": "https://doi.org/10.1016/j.knosys.2025.114190",
+    "status": 200,
+    "venue": "Knowledge-Based Systems",
+    "year": 2025,
+    "match": 1
+  },
+  {
+    "title": "ASMA: An Adaptive Safety Margin Algorithm for Vision-Language Drone Navigation via Scene-Aware Control Barrier Functions",
+    "doi": "10.1109/lra.2025.3592138",
+    "url": "https://doi.org/10.1109/lra.2025.3592138",
+    "status": 202,
+    "venue": "IEEE Robotics and Automation Letters",
+    "year": 2025,
+    "match": 0.73
+  },
+  {
+    "title": "Foundation models in robotics: Applications, challenges, and the future",
+    "doi": "10.1177/02783649241281508",
+    "url": "https://doi.org/10.1177/02783649241281508",
+    "status": 403,
+    "venue": "The International Journal of Robotics Research",
+    "year": 2024,
+    "match": 1
+  },
+  {
+    "title": "Crossing the Reality Gap: A Survey on Sim-to-Real Transferability of Robot Controllers in Reinforcement Learning",
+    "doi": "10.1109/access.2021.3126658",
+    "url": "https://doi.org/10.1109/access.2021.3126658",
+    "status": 202,
+    "venue": "IEEE Access",
+    "year": 2021,
+    "match": 1
+  },
+  {
+    "title": "A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight",
+    "doi": "10.1109/icra46639.2022.9811564",
+    "url": "https://doi.org/10.1109/icra46639.2022.9811564",
+    "status": 202,
+    "venue": "2022 International Conference on Robotics and Automation (ICRA)",
+    "year": 2022,
+    "match": 1
+  }
+]
