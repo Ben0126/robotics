@@ -61,7 +61,9 @@
 | [reading-track.md](reading-track.md) | 低設備路線：讀 paper / 懂架構 / 通程式用法（純讀可完成） |
 | [m1-offboard-code-reading.md](m1-offboard-code-reading.md) | M1 產出物①：`offboard_control` 逐段 code-reading 筆記 + 送定點 cheat-sheet |
 | [m1-dataflow-diagram.md](m1-dataflow-diagram.md) | M1 產出物②：ROS2 → DDS → PX4 → 馬達 資料流圖（Mermaid + ASCII）|
+| [m1-guided-reading.md](m1-guided-reading.md) | M1 帶讀筆記：上面兩份的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）|
 | [m2-cascade-control-diagram.md](m2-cascade-control-diagram.md) | M2 產出物：位置→速度→姿態→角速度 級聯方塊圖 + 症狀↔參數對照表 |
+| [m2-guided-reading.md](m2-guided-reading.md) | M2 帶讀筆記：級聯方塊圖的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）|
 | [m3-ai-models-comparison.md](m3-ai-models-comparison.md) | M3 產出物①：VLA/Diffusion/RL 5 點論文筆記 + 傳統管線 vs VLA vs Diffusion vs RL 四典範對照表 |
 | [m3-openvla-inference-cheatsheet.md](m3-openvla-inference-cheatsheet.md) | M3 產出物②：OpenVLA「load 模型→跑一次推論」API cheat-sheet |
 | [m3-perception-pipeline-diagram.md](m3-perception-pipeline-diagram.md) | M3 產出物③：感知 pipeline 架構圖（相機影像→VLM→語義 JSON，Mermaid+ASCII）|

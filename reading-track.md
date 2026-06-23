@@ -32,6 +32,8 @@
 
 **☁️ 可選輕量**：CPU 跑 `rclpy` 的 talker/listener 玩具（純邏輯，無需真機/模擬器）。
 
+> 📖 **帶讀**：兩份產出物的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m1-guided-reading.md](m1-guided-reading.md)。
+
 ---
 
 ## Module 2 · 控制理論與 PID（純概念，取代 Phase 1 調參）
@@ -39,6 +41,8 @@
 **讀什麼**：PX4 Controller Diagrams + PID Tuning Guide；Brian Douglas 控制系列影片。
 **要看懂**：級聯控制（位置→速度→姿態→角速度）、P/I/D 各自作用、`MC_ROLL_P` vs `MC_ROLLRATE_P` 屬哪一環、調太大/太小的症狀。
 **理解產出物**：級聯控制方塊圖 + 「症狀 ↔ 參數」對照表（不需實際調，理解因果即可）。
+
+> 📖 **帶讀**：方塊圖與對照表的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m2-guided-reading.md](m2-guided-reading.md)。
 
 ---
 
@@ -64,6 +68,8 @@
 **☁️ 可選輕量（無 GPU）**
 - 用 **Claude（Opus 4.8 / Sonnet 4.6）或 GPT 多模態 API** 對一張無人機視角圖做語義（純 API，要求 JSON 輸出）。
 - 免費 **Colab GPU** 跑 CLIP / 小型 VLM / OpenVLA 的 **inference** demo（只推論、不訓練，免費額度就夠）。
+
+> 📖 **帶讀**：三份 M3 產出物的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m3-guided-reading.md](m3-guided-reading.md)。
 
 ---
 
