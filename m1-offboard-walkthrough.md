@@ -266,6 +266,50 @@ int main(int argc, char *argv[])
 
 ---
 
+## 🧠 深入理解：Position setpoint 的位置從哪來？
+
+`TrajectorySetpoint.position = {0, 0, -5}` 是你「命令」PX4 飛去哪的**目標值**，不是感測器讀值。PX4 內部用 **EKF2**（Extended Kalman Filter 2）融合多種感測器估算當前位置，再拿估算值與你的 setpoint 做誤差計算：
+
+```
+感測器融合 → EKF2 → vehicle_local_position（uORB）
+                               ↓
+你的 setpoint → [誤差] → 位置控制器 → 速度控制器 → 姿態控制器 → 馬達
+```
+
+| 感測器 | 貢獻 | 侷限 |
+|---|---|---|
+| IMU（加速度計+陀螺儀）| 高頻短期運動 | 積分漂移，獨立使用幾秒就跑掉 |
+| GPS/GNSS | 絕對位置（戶外）| 室內無訊號 |
+| 氣壓計 | 高度 | 只有 z 軸，精度約 ±1m |
+| 光流（Optical Flow）| 相對速度/位移 | 需要紋理豐富的地面 |
+| VIO / Motion Capture | 室內精確位置 | 需額外硬體（T265、VICON 等）|
+
+> IMU 是 EKF2 的輸入之一，**不是**位置估算的唯一來源。如果想在節點裡讀回 PX4 當前估算的位置，訂閱 `/fmu/out/vehicle_local_position`。
+
+---
+
+## 🎛️ 何時選用不同的控制層？
+
+`OffboardControlMode` 的五個 bool 決定你「在級聯控制的哪個入口插手」。越往下層，你需要在 companion 上自己實作的控制邏輯越多，但換來更高的敏捷性與控制彈性：
+
+```
+[你的節點] → position → velocity → acceleration → attitude → body_rate → mixer → 馬達
+              ↑                                                              ↑
+         最上層，最容易用                                          最下層，最敏捷
+```
+
+| 模式 | 典型場景 | 為什麼選它 |
+|---|---|---|
+| **position**（本例）| 定點懸停、航點任務 | 最省力，PX4 跑完整個級聯。**前提：有可靠位置估算（GPS 或 VIO）** |
+| **velocity** | 跟蹤移動目標、視覺伺服、GPS denied 環境 | 沒有絕對位置也能飛；用「往哪個方向、多快」語義，不需指定終點座標 |
+| **acceleration** | 軌跡規劃器直接輸出加速度（MPC 等）| 減少中間轉換誤差，作為 feedforward 使用 |
+| **attitude** | Companion 自跑位置/速度外環，只讓 PX4 穩定姿態 | 需要更快的外環回應，或需精細姿態控制（如無人機掛載機械臂）|
+| **body_rate** | 競速機、強化學習 policy、高敏捷動作（翻滾）| 最快響應；companion 需自己跑完整姿態控制，RL controller 常直接輸出角速度指令 |
+
+**選擇原則**：有 GPS/VIO + 任務簡單 → `position`；GPS denied 或需速度語義 → `velocity`；Companion 有自己的控制器 → `attitude` 或 `body_rate`；追求最小延遲 → `body_rate`（你要負責姿態穩定）。
+
+---
+
 ## ⚠️ 讀這份範例要注意的版本/座標陷阱
 
 - **topic 命名**：`/fmu/in/*` 與 `/fmu/out/*` 是 **uXRCE-DDS（PX4 v1.14+）** 的命名。更舊的 micrortps_bridge 是 `/fmu/xxx/in` 這種，別搞混。
