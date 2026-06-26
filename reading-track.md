@@ -14,6 +14,19 @@
 
 ---
 
+## Module 0 · C++/Python 手感（前置，取代 Phase 1 Week 1 Day 1–5）
+
+**讀什麼**：cppreference smart pointers、learncpp ch.15–22、*A Tour of C++* ch.1–6、*C++ Concurrency in Action* ch.2–4、NumPy quickstart、asyncio 官方教學。
+
+**要看懂**：C++ 資源管理（指標/RAII/智慧指標）、OOP/move、多執行緒（mutex/condition_variable、飛控為何多線）；Python 向量化（NumPy broadcasting）、asyncio event loop。
+
+**理解產出物**：smart pointer 決策表、一段 leak/race code 的逐行標註、飛控多執行緒小圖、向量化 vs for 對照、event loop 心智模型圖（全部純讀，不需編譯）。
+
+> 📖 **閱讀版全文**（每日「讀什麼/要看懂/讀這段 code/產出物」+ 停點自問 + 分級小考）見 [m0-cpp-python-foundations.md](m0-cpp-python-foundations.md)。動手路線對照 [01-phase1 Week 1](01-phase1-control-sim.md)。
+> 📖 **完整版筆記**（每個觀念從頭講清楚：stack/heap、智慧指標、RAII、move、多執行緒、NumPy、asyncio，含逐行 code 解說與自我驗收）見 [m0-cpp-python-walkthrough.md](m0-cpp-python-walkthrough.md)。
+
+---
+
 ## Module 1 · 飛控與中介層「架構與用法」（取代 Phase 1–2）
 
 **讀什麼**
@@ -83,7 +96,7 @@
 ---
 
 ## 建議節奏
-純讀路線可比原 8 週鬆：每模組約 1.5–2 週，依你時間。順序仍是 **M1 架構 → M2 控制 → M3 AI 模型 → M4 前沿**（由底層往上）。
+純讀路線可比原 8 週鬆：每模組約 1.5–2 週，依你時間。順序：**M0 程式手感（前置）→ M1 架構 → M2 控制 → M3 AI 模型 → M4 前沿**（由底層往上；底子夠可略過 M0 直接上 M1）。
 進度一樣回 [progress-tracker.md](progress-tracker.md) 勾「自我驗收 checkpoint」——把每條「你應該要能…」當口頭小考。
 
 ## 怎麼用我（Claude Code）跑這條路線

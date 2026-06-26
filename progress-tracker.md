@@ -15,6 +15,16 @@
 
 ---
 
+## 🧱 Module 0 — C++/Python 手感（閱讀路線前置）
+對應 [m0-cpp-python-foundations.md](m0-cpp-python-foundations.md)（動手路線走 Phase 1 Week 1 者可略過此塊）
+- [ ] 能說清 `unique_ptr`/`shared_ptr`/`weak_ptr` 差別與循環引用怎麼解
+- [ ] 能在一段 code 上指出 leak/dangling/double-free 並用 RAII 修
+- [ ] 能解釋飛控為何多執行緒，並圈出 producer-consumer 臨界區
+- [ ] 能說出哪種 for 不能向量化，並寫出向量化 vs for 對照
+- [ ] 能解釋 async 是單線協作式、誤用阻塞呼叫的後果
+
+---
+
 ## 📘 Phase 1 — Week 1（C++/Python + PX4 架構）
 里程碑
 - [ ] Day1 smart pointer 練習　- [ ] Day2 PID class　- [ ] Day3 producer-consumer

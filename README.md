@@ -59,6 +59,8 @@
 |---|---|
 | [README.md](README.md) | 本檔：總覽、使用方式、8 週總覽表 |
 | [reading-track.md](reading-track.md) | 低設備路線：讀 paper / 懂架構 / 通程式用法（純讀可完成） |
+| [m0-cpp-python-foundations.md](m0-cpp-python-foundations.md) | M0 前置（閱讀版）：Week 1 Day 1–5 的 C++/Python 手感，動手改為讀 code/做對照表/分級小考 |
+| [m0-cpp-python-walkthrough.md](m0-cpp-python-walkthrough.md) | M0 完整版筆記：每個觀念從頭講清楚（stack/heap、智慧指標、RAII、move、多執行緒、NumPy、asyncio）+ 逐行 code 解說 |
 | [m1-offboard-code-reading.md](m1-offboard-code-reading.md) | M1 產出物①：`offboard_control` 逐段 code-reading 筆記 + 送定點 cheat-sheet |
 | [m1-dataflow-diagram.md](m1-dataflow-diagram.md) | M1 產出物②：ROS2 → DDS → PX4 → 馬達 資料流圖（Mermaid + ASCII）|
 | [m1-guided-reading.md](m1-guided-reading.md) | M1 帶讀筆記：上面兩份的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）|
