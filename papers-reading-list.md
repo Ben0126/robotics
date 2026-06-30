@@ -23,9 +23,9 @@
 
 | 論文 | 出處 | 難度 | 為何讀 |
 |---|---|---|---|
-| **VLA Survey: A Review Towards Real-World Applications** — Kawaharazuka et al. | IEEE Access 2025 · [doi:10.1109/ACCESS.2025.3609980](https://doi.org/10.1109/ACCESS.2025.3609980) · [網站](https://vla-survey.github.io/) | 🟢 | **先讀這篇 survey** 建立全貌（架構、資料、benchmark、平台）。 |
-| **RT-2: VLA Models Transfer Web Knowledge to Robotic Control** — Brohan et al. (Google DeepMind) | CoRL 2023 · [專案頁](https://robotics-transformer2.github.io/) | 🟡 | 把動作當成 text token 與網路知識共同訓練的奠基作。 |
-| **OpenVLA: An Open-Source VLA Model** — Kim et al. | CoRL 2024 · [arXiv:2406.09246](https://arxiv.org/abs/2406.09246) · [專案頁](https://openvla.github.io/) | 🟡 | **7B 開源、可在消費級 GPU 用 LoRA 微調** —— 最適合你動手的 VLA。 |
+| **VLA Survey: A Review Towards Real-World Applications** — Kawaharazuka et al. | IEEE Access 2025 · [doi:10.1109/ACCESS.2025.3609980](https://doi.org/10.1109/ACCESS.2025.3609980) · [網站](https://vla-survey.github.io/) | 🟢 | **先讀這篇 survey** 建立全貌（架構、資料、benchmark、平台）。📖 帶讀筆記見 [m3-vla-survey-guided-reading.md](m3-vla-survey-guided-reading.md)。 |
+| **RT-2: VLA Models Transfer Web Knowledge to Robotic Control** — Brohan et al. (Google DeepMind) | CoRL 2023 · [專案頁](https://robotics-transformer2.github.io/) | 🟡 | 把動作當成 text token 與網路知識共同訓練的奠基作。📖 帶讀 [m3-rt2-guided-reading.md](m3-rt2-guided-reading.md)。 |
+| **OpenVLA: An Open-Source VLA Model** — Kim et al. | CoRL 2024 · [arXiv:2406.09246](https://arxiv.org/abs/2406.09246) · [專案頁](https://openvla.github.io/) | 🟡 | **7B 開源、可在消費級 GPU 用 LoRA 微調** —— 最適合你動手的 VLA。📖 帶讀 [m3-openvla-guided-reading.md](m3-openvla-guided-reading.md)。 |
 | π0 (pi-zero, flow-matching VLA) — Physical Intelligence | 2024 | 🔴 | flow-matching 接 VLM 的最新動作生成路線（接你 NotebookLM 的 flow policy 主題）。 |
 | Octo（memory-augmented transformer, Open X-Embodiment） | 2024 | 🟡 | 大規模多機 trajectory 訓練的泛化策略代表。 |
 
@@ -36,7 +36,7 @@
 
 | 論文 | 出處 | 難度 | 為何讀 |
 |---|---|---|---|
-| **Diffusion Policy: Visuomotor Policy Learning via Action Diffusion** — Chi et al. | RSS 2023 / IJRR 2024 · [arXiv:2303.04137](https://arxiv.org/abs/2303.04137) · [專案頁](https://diffusion-policy.cs.columbia.edu/) | 🟡 | **生成式策略的奠基作**：以條件去噪生成動作序列，擅長多模態。先讀本篇再看下方 RL 微調。 |
+| **Diffusion Policy: Visuomotor Policy Learning via Action Diffusion** — Chi et al. | RSS 2023 / IJRR 2024 · [arXiv:2303.04137](https://arxiv.org/abs/2303.04137) · [專案頁](https://diffusion-policy.cs.columbia.edu/) | 🟡 | **生成式策略的奠基作**：以條件去噪生成動作序列，擅長多模態。先讀本篇再看下方 RL 微調。📖 帶讀 [m3-diffusion-policy-guided-reading.md](m3-diffusion-policy-guided-reading.md)。 |
 | DPPO / D²PPO / ReinFlow / Flow Q-Learning | （已在你的 NotebookLM 筆記中） | 🔴 | 用 RL 微調 diffusion/flow 策略、解表徵崩塌與採樣效率 —— 用 NotebookLM 直接問答即可。 |
 
 ---
@@ -46,8 +46,8 @@
 
 | 論文 | 出處 | 難度 | 為何讀 |
 |---|---|---|---|
-| **Champion-level drone racing using deep RL (Swift)** — Kaufmann, Bauersfeld, Loquercio, Müller, Koltun, Scaramuzza | **Nature** 620, 982–987 (2023) · [doi:10.1038/s41586-023-06419-4](https://doi.org/10.1038/s41586-023-06419-4) | 🟡 | **必讀旗艦**：純 onboard 感測 + 在 sim 訓 RL 打敗人類冠軍；經驗噪聲模型縮 sim-to-real gap。 |
-| **Learning High-Speed Flight in the Wild** — Loquercio, Kaufmann, Ranftl, Müller, Koltun, Scaramuzza | **Science Robotics** 2021 · [arXiv:2110.05113](https://arxiv.org/abs/2110.05113) | 🟡 | 端到端「感測→無碰撞軌跡」、privileged learning、zero-shot sim→real 穿越叢林。 |
+| **Champion-level drone racing using deep RL (Swift)** — Kaufmann, Bauersfeld, Loquercio, Müller, Koltun, Scaramuzza | **Nature** 620, 982–987 (2023) · [doi:10.1038/s41586-023-06419-4](https://doi.org/10.1038/s41586-023-06419-4) | 🟡 | **必讀旗艦**：純 onboard 感測 + 在 sim 訓 RL 打敗人類冠軍；經驗噪聲模型縮 sim-to-real gap。📖 帶讀 [m3-swift-guided-reading.md](m3-swift-guided-reading.md)。 |
+| **Learning High-Speed Flight in the Wild** — Loquercio, Kaufmann, Ranftl, Müller, Koltun, Scaramuzza | **Science Robotics** 2021 · [arXiv:2110.05113](https://arxiv.org/abs/2110.05113) | 🟡 | 端到端「感測→無碰撞軌跡」、privileged learning、zero-shot sim→real 穿越叢林。📖 帶讀 [m3-high-speed-flight-guided-reading.md](m3-high-speed-flight-guided-reading.md)。 |
 
 ---
 
@@ -58,6 +58,8 @@
 |---|---|---|---|
 | **OmniDrones** — Xu et al. | [arXiv:2309.12825](https://arxiv.org/abs/2309.12825) · [docs](https://omnidrones.readthedocs.io/) · [GitHub](https://github.com/btx0424/OmniDrones) | 🟡 | Isaac Sim 上多旋翼 RL，10⁵ FPS、TorchRL，懸停→過驅追蹤等 benchmark。 |
 | **Aerial Gym Simulator** — Kulkarni, Rehberg, Alexis | RA-L 2025 · [doi:10.1109/LRA.2025.3548507](https://doi.org/10.1109/LRA.2025.3548507) · [網站](https://ntnu-arl.github.io/aerial_gym_simulator/) | 🟡 | Isaac Gym 千台並行、GPU 幾何控制器；motor 政策 <1 分鐘、視覺導航 <1 小時可訓出。 |
+
+> 📖 兩個平台合一帶讀（task/config/reward 三塊、客製改哪裡、接 Phase 4）見 [m3-sim-platforms-guided-reading.md](m3-sim-platforms-guided-reading.md)。
 
 ---
 

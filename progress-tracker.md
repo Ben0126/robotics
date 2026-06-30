@@ -6,7 +6,7 @@
 ---
 
 ## 🔧 環境就緒（開始前）
-對應 [00-environment-setup.md](00-environment-setup.md) §5
+對應 [00-environment-setup.md](phases/00-environment-setup.md) §5
 - [ ] `ros2 doctor` / `ros2 topic list` 可執行
 - [ ] `make px4_sitl gz_x500` 能編譯並開 Gazebo
 - [ ] `commander takeoff` 能讓無人機起飛
@@ -16,7 +16,7 @@
 ---
 
 ## 🧱 Module 0 — C++/Python 手感（閱讀路線前置）
-對應 [m0-cpp-python-foundations.md](m0-cpp-python-foundations.md)（動手路線走 Phase 1 Week 1 者可略過此塊）
+對應 [m0-cpp-python-foundations.md](m0-foundations/m0-cpp-python-foundations.md)（動手路線走 Phase 1 Week 1 者可略過此塊）
 - [ ] 能說清 `unique_ptr`/`shared_ptr`/`weak_ptr` 差別與循環引用怎麼解
 - [ ] 能在一段 code 上指出 leak/dangling/double-free 並用 RAII 修
 - [ ] 能解釋飛控為何多執行緒，並圈出 producer-consumer 臨界區

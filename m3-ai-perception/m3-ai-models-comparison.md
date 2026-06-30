@@ -28,49 +28,49 @@ RL：        觀測 ──────► 策略網路 ──────► 動
 
 > 格式：**問題 / 方法 / 關鍵設計 / 結果 / 對我的啟發**。難度沿用 [papers-reading-list.md](papers-reading-list.md)：🟢 入門 🟡 方法 🔴 進階。
 
-### 1a. VLA Survey — *A Review Towards Real-World Applications*（Kawaharazuka et al., IEEE Access 2025）🟢
+### 1a. VLA Survey — *A Review Towards Real-World Applications*（Kawaharazuka et al., IEEE Access 2025）🟢 · 📖 [逐篇帶讀](m3-vla-survey-guided-reading.md)
 - **問題**：VLA（Vision-Language-Action）模型百家爭鳴，缺一張「架構/資料/benchmark/平台」的全景地圖。
 - **方法**：系統性回顧——把 VLA 依「動作如何產生」「用什麼資料」「在哪些平台/任務評測」分類。
 - **關鍵設計**：點出 VLA 的共同骨架＝**預訓練 VLM 當底座 + 動作頭**；資料瓶頸（真機 trajectory 貴）是主軸矛盾。
 - **結果**：給出整個領域的座標系與未解問題（資料規模、即時性、跨形態泛化、安全）。
 - **對我的啟發**：**先讀這篇建立全貌**，再用 RT-2/OpenVLA 補方法細節。它的「未解問題」清單可直接餵 Phase 4 選題。
 
-### 1b. RT-2 — *VLA Models Transfer Web Knowledge to Robotic Control*（Brohan et al., Google DeepMind, CoRL 2023）🟡
+### 1b. RT-2 — *VLA Models Transfer Web Knowledge to Robotic Control*（Brohan et al., Google DeepMind, CoRL 2023）🟡 · 📖 [逐篇帶讀](m3-rt2-guided-reading.md)
 - **問題**：機器人資料太少難泛化；網路上的視覺-語言知識能不能「轉」進控制？
 - **方法**：把大型 VLM（PaLI-X / PaLM-E 級）拿來**共同微調（co-fine-tune）**——同時餵網路 VQA 資料 + 機器人 trajectory。
 - **關鍵設計**：**動作當成 text token**（離散化成「動作詞彙」），讓控制和語言走同一個輸出頭；co-training 保住網路知識 → 出現**語義泛化/推理**（能對沒見過的物件、符號做合理動作）。
 - **結果**：對未見物件/指令的泛化大幅提升，出現 chain-of-thought 等湧現能力；但**閉源、模型巨大**。
 - **對我的啟發**：「動作即 token」是復用 LLM/VLM 的橋；但跑不動 → 真要動手改用 OpenVLA。
 
-### 1c. OpenVLA — *An Open-Source VLA Model*（Kim et al., CoRL 2024）🟡 ★動手主力
+### 1c. OpenVLA — *An Open-Source VLA Model*（Kim et al., CoRL 2024）🟡 ★動手主力 · 📖 [逐篇帶讀](m3-openvla-guided-reading.md)
 - **問題**：當紅 VLA 多閉源、難客製；需要一個**開源、可在消費級 GPU 微調**的 VLA。
 - **方法**：7B 模型，底座＝Prismatic VLM（**Llama 2 7B + DINOv2 + SigLIP** 雙視覺編碼器融合）；用 **Open X-Embodiment 約 97 萬條** episode 訓練。
 - **關鍵設計**：動作以 **256 bin 離散化**，覆寫 Llama 詞表中最少用的 256 個 token；**LoRA 微調**單張(消費級~A100)即可；推論支援 **4/8-bit 量化**。
 - **結果**：以 **7× 更少參數**在通用操作上勝過 RT-2-X(55B)；參數高效微調表現強。
 - **對我的啟發**：**這就是 cheat-sheet 那篇**（[m3-openvla-inference-cheatsheet.md](m3-openvla-inference-cheatsheet.md)）。它輸出 7-DoF **機械臂末端增量**；要用到無人機，得把動作頭重映射到 `TrajectorySetpoint` / body-rate（接 [m1-offboard-code-reading.md](m1-offboard-code-reading.md)）。
 
-### 1d. Diffusion Policy — *Visuomotor Policy Learning via Action Diffusion*（Chi et al., RSS 2023 / IJRR 2024）🟡
+### 1d. Diffusion Policy — *Visuomotor Policy Learning via Action Diffusion*（Chi et al., RSS 2023 / IJRR 2024）🟡 · 📖 [逐篇帶讀](m3-diffusion-policy-guided-reading.md)
 - **問題**：一般 BC 直接回歸「單一動作」，碰到**多模態**（同一畫面有多個合理動作，如繞左/繞右）會學成平均值而崩。
 - **方法**：把「產生動作」當成**條件式去噪擴散**——以觀測為條件，從噪聲逐步生成一段**動作序列**。
 - **關鍵設計**：**visual conditioning**（觀測注入去噪網路）、**action chunking + receding horizon**（一次生一段、只執行前幾步再重生）、天然處理多模態、訓練穩定；有 CNN 與 Transformer 兩種骨架。
 - **結果**：在大量操作任務上顯著超越 BC 基線。
 - **對我的啟發**：多模態動作的解法很漂亮，代價是**去噪要多步 → 推論延遲高**；用在高動態 UAV 要算清「即時性 vs 表現」帳。
 
-### 1e. Swift — *Champion-level drone racing using deep RL*（Kaufmann et al., **Nature** 2023）🟡 ★旗艦
+### 1e. Swift — *Champion-level drone racing using deep RL*（Kaufmann et al., **Nature** 2023）🟡 ★旗艦 · 📖 [逐篇帶讀](m3-swift-guided-reading.md)
 - **問題**：只靠**機載感測**，自主無人機能否在 FPV 競速打贏人類世界冠軍？
 - **方法**：**在 sim 用 RL 訓策略**；感知模組（VIO + 閘門偵測 CNN）給狀態估測 → RL 策略輸出**集體推力 + body rate（CTBR）**。
 - **關鍵設計**：用**經驗噪聲/殘差模型**（拿少量真機資料校正 sim）縮 **sim-to-real gap**；全程 onboard、訓在 sim。
 - **結果**：擊敗多位人類世界冠軍——RL 無人機首次達冠軍級。
 - **對我的啟發**：sim-to-real 不一定靠暴力 domain randomization，**對誤差來源建模**更省。輸出是「推力+角速度」＝直接打 M2 的**最內角速度環**（[m2-cascade-control-diagram.md](m2-cascade-control-diagram.md)）。
 
-### 1f. Learning High-Speed Flight in the Wild（Loquercio et al., **Science Robotics** 2021）🟡
+### 1f. Learning High-Speed Flight in the Wild（Loquercio et al., **Science Robotics** 2021）🟡 · 📖 [逐篇帶讀](m3-high-speed-flight-guided-reading.md)
 - **問題**：在**未知野外**高速避障，傳統「建圖→規劃」太慢，能否端到端？
 - **方法**：端到端網路把**深度圖 + 狀態**直接映射到**無碰撞軌跡**；用 **privileged learning**（teacher 有完整狀態/地圖，student 只用機載感測模仿）；**只在 sim 訓、zero-shot 上真機**。
 - **關鍵設計**：teacher-student 特權學習、以深度做感知抽象、sim-only → zero-shot sim2real。
 - **結果**：在森林/建物間以最高 ~10 m/s 無地圖穿越。
 - **對我的啟發**：端到端輸出的是**軌跡（waypoints）而非原始馬達**——和 OpenVLA 的「末端增量」一樣，落地都要接回 `TrajectorySetpoint`。privileged learning 是繞過「真機標註貴」的好招。
 
-### 1g. OmniDrones / Aerial Gym（W6 動手平台，讀文件不必訓練）🟡
+### 1g. OmniDrones / Aerial Gym（W6 動手平台，讀文件不必訓練）🟡 · 📖 [逐篇帶讀](m3-sim-platforms-guided-reading.md)
 - **是什麼**：Isaac 系 **GPU 並行**多旋翼 RL 模擬器（OmniDrones on Isaac Sim、Aerial Gym on Isaac Gym），數百~數千環境並行、10⁵ 級 FPS。
 - **要看懂的「程式用法」**：一個 RL 任務由 **task / config / reward** 三塊構成——**要客製任務就改這三處**（觀測空間、動作空間、reward 函式、隨機化設定）。
 - **對我的啟發**：這是把上面 RL 概念**真的跑起來**的入口；無 GPU 時精讀其 reward/隨機化怎麼寫即可（接 Phase 4 starter project）。

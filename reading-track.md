@@ -1,7 +1,7 @@
 # 📖 低設備複習路線：讀 Paper · 懂架構 · 通程式用法（Reading-First Track）
 
 > 適用：設備受限、暫時不跑 SITL/Isaac Lab，傾向**讀論文、理解系統架構、看懂程式怎麼用**。
-> 原本的動手路線（[01](01-phase1-control-sim.md)–[04](04-phase4-integration-papers.md)）保留不動，等設備到位或用雲端 GPU 再接回。
+> 原本的動手路線（[01](phases/01-phase1-control-sim.md)–[04](phases/04-phase4-integration-papers.md)）保留不動，等設備到位或用雲端 GPU 再接回。
 
 ## 核心原則：用「理解產出物」取代「跑出來的東西」
 每個模組的驗收，不是「讓它動」，而是你**產出一個證明你懂了的東西**：
@@ -22,8 +22,8 @@
 
 **理解產出物**：smart pointer 決策表、一段 leak/race code 的逐行標註、飛控多執行緒小圖、向量化 vs for 對照、event loop 心智模型圖（全部純讀，不需編譯）。
 
-> 📖 **閱讀版全文**（每日「讀什麼/要看懂/讀這段 code/產出物」+ 停點自問 + 分級小考）見 [m0-cpp-python-foundations.md](m0-cpp-python-foundations.md)。動手路線對照 [01-phase1 Week 1](01-phase1-control-sim.md)。
-> 📖 **完整版筆記**（每個觀念從頭講清楚：stack/heap、智慧指標、RAII、move、多執行緒、NumPy、asyncio，含逐行 code 解說與自我驗收）見 [m0-cpp-python-walkthrough.md](m0-cpp-python-walkthrough.md)。
+> 📖 **閱讀版全文**（每日「讀什麼/要看懂/讀這段 code/產出物」+ 停點自問 + 分級小考）見 [m0-cpp-python-foundations.md](m0-foundations/m0-cpp-python-foundations.md)。動手路線對照 [01-phase1 Week 1](phases/01-phase1-control-sim.md)。
+> 📖 **完整版筆記**（每個觀念從頭講清楚：stack/heap、智慧指標、RAII、move、多執行緒、NumPy、asyncio，含逐行 code 解說與自我驗收）見 [m0-cpp-python-walkthrough.md](m0-foundations/m0-cpp-python-walkthrough.md)。
 
 ---
 
@@ -45,7 +45,7 @@
 
 **☁️ 可選輕量**：CPU 跑 `rclpy` 的 talker/listener 玩具（純邏輯，無需真機/模擬器）。
 
-> 📖 **帶讀**：兩份產出物的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m1-guided-reading.md](m1-guided-reading.md)。
+> 📖 **帶讀**：兩份產出物的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m1-guided-reading.md](m1-offboard-control/m1-guided-reading.md)。
 
 ---
 
@@ -55,7 +55,7 @@
 **要看懂**：級聯控制（位置→速度→姿態→角速度）、P/I/D 各自作用、`MC_ROLL_P` vs `MC_ROLLRATE_P` 屬哪一環、調太大/太小的症狀。
 **理解產出物**：級聯控制方塊圖 + 「症狀 ↔ 參數」對照表（不需實際調，理解因果即可）。
 
-> 📖 **帶讀**：方塊圖與對照表的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m2-guided-reading.md](m2-guided-reading.md)。
+> 📖 **帶讀**：方塊圖與對照表的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m2-guided-reading.md](m2-cascade-control/m2-guided-reading.md)。
 
 ---
 
@@ -82,7 +82,8 @@
 - 用 **Claude（Opus 4.8 / Sonnet 4.6）或 GPT 多模態 API** 對一張無人機視角圖做語義（純 API，要求 JSON 輸出）。
 - 免費 **Colab GPU** 跑 CLIP / 小型 VLM / OpenVLA 的 **inference** demo（只推論、不訓練，免費額度就夠）。
 
-> 📖 **帶讀**：三份 M3 產出物的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m3-guided-reading.md](m3-guided-reading.md)。
+> 📖 **帶讀**：三份 M3 產出物的陪讀導讀（閱讀順序、停點自問、難點比喻、分級小考）見 [m3-guided-reading.md](m3-ai-perception/m3-guided-reading.md)。
+> 📖 **論文帶讀**：第一篇 **VLA Survey**（Kawaharazuka et al., IEEE Access 2025）的逐章帶讀（三軸分類、演進史、停點自問、分級小考、接 UAV 題目）見 [m3-vla-survey-guided-reading.md](m3-ai-perception/m3-vla-survey-guided-reading.md)。
 
 ---
 
@@ -107,4 +108,4 @@
 - **出題驗收**：「用 Module 1 的 checkpoint 考我 uXRCE-DDS 橋接」。
 
 ## 何時切回動手路線
-設備到位、或願意用雲端 GPU（RunPod / vast.ai / Lambda）/ 免費 Colab 時，回到 [01–04 動手路線](01-phase1-control-sim.md)，先補做各 Phase 的「本週交付物」。
+設備到位、或願意用雲端 GPU（RunPod / vast.ai / Lambda）/ 免費 Colab 時，回到 [01–04 動手路線](phases/01-phase1-control-sim.md)，先補做各 Phase 的「本週交付物」。
