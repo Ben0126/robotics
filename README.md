@@ -114,6 +114,17 @@
 | [m3-high-speed-flight-guided-reading.md](m3-ai-perception/m3-high-speed-flight-guided-reading.md) | Learning High-Speed Flight 論文帶讀 |
 | [m3-sim-platforms-guided-reading.md](m3-ai-perception/m3-sim-platforms-guided-reading.md) | 模擬平台（OmniDrones / Aerial Gym）帶讀 |
 
+**[m4-swarm-collision-avoidance/](m4-swarm-collision-avoidance/) — Module 4：多機群飛與避碰（延伸主題，非 8 週主線）**
+
+> 20 台無人機群飛（1 主控 + 19 僚機）、僚機動態脫隊執行任務後自動歸隊、以及避碰穩定性的先備知識與論文清單。
+
+| 檔案 | 內容 |
+|---|---|
+| [m4-swarm-guided-reading.md](m4-swarm-collision-avoidance/m4-swarm-guided-reading.md) | M4① 帶讀筆記：群飛/隊形控制基礎、Leader-Follower 架構選型、任務分配與脫隊歸隊 |
+| [m4-collision-avoidance-diagnosis.md](m4-swarm-collision-avoidance/m4-collision-avoidance-diagnosis.md) | M4② 避碰演算法深度比較（APF/ORCA/BVC/DMPC/CBF/學習式）+ 現有模組不穩定的症狀診斷對照表 |
+| [m4-ros2-swarm-tooling.md](m4-swarm-collision-avoidance/m4-ros2-swarm-tooling.md) | M4③ ROS2 群飛工具鏈（Crazyswarm2、PX4 multi-vehicle、DDS 擴展性、QoS） |
+| [m4-papers-reading-list.md](m4-swarm-collision-avoidance/m4-papers-reading-list.md) | M4④ 產出物：群飛/避碰必讀論文清單（含難度、為何讀） |
+
 ---
 
 ## 🔄 版本與時效性備註（2026-06）

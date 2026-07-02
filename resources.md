@@ -88,6 +88,19 @@
 
 ---
 
+## 4b. 群飛 / 多機避碰（延伸主題）
+
+> 📑 完整帶讀筆記與論文清單見 [m4-swarm-collision-avoidance/](m4-swarm-collision-avoidance/)（[隊形控制入門](m4-swarm-collision-avoidance/m4-swarm-guided-reading.md)、[避碰演算法診斷](m4-swarm-collision-avoidance/m4-collision-avoidance-diagnosis.md)、[ROS2 群飛工具鏈](m4-swarm-collision-avoidance/m4-ros2-swarm-tooling.md)、[論文清單](m4-swarm-collision-avoidance/m4-papers-reading-list.md)）。
+
+| 主題 | 連結 | 重點 |
+|---|---|---|
+| Crazyswarm2 | <https://github.com/IMRCLab/crazyswarm2> | ROS2 群飛測試平台，命名空間/啟動架構值得參考 |
+| RVO2 Library（ORCA 官方實作） | <https://gamma.cs.unc.edu/RVO2/> | 避碰演算法落地首選 baseline |
+| PX4 Multi-Vehicle Simulation | <https://docs.px4.io/main/en/simulation/multi-vehicle-simulation.html> | 20 機 SITL 模擬的官方入口 |
+| ROS2 Discovery Server | <https://docs.ros.org/en/humble/Tutorials/Advanced/Discovery-Server/Discovery-Server.html> | 解決 20+ 節點 DDS 探索風暴 |
+
+---
+
 ## 5. 頂會與追蹤管道
 - **頂會**：ICRA、IROS、RSS、CoRL（機器人）；CVPR、NeurIPS、CoRL（學習）。
 - **追蹤**：arXiv cs.RO / cs.LG、Papers with Code、各實驗室 Twitter/X 與 YouTube demo。
