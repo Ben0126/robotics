@@ -99,6 +99,10 @@
 | PX4 Multi-Vehicle Simulation | <https://docs.px4.io/main/en/simulation/multi-vehicle-simulation.html> | 20 機 SITL 模擬的官方入口 |
 | ROS2 Discovery Server | <https://docs.ros.org/en/humble/Tutorials/Advanced/Discovery-Server/Discovery-Server.html> | 解決 20+ 節點 DDS 探索風暴 |
 
+## 4c. 單機 GPS-denied VLA（延伸主題 · 團隊技術報告）
+
+> 📑 完整技術報告與論文清單見 [m5-vla-gps-denied/](m5-vla-gps-denied/)（[VLA 訓練環境與資料集](m5-vla-gps-denied/m5-vla-training-env-dataset.md)、[GPS-denied 定位替代方案](m5-vla-gps-denied/m5-gps-denied-localization.md)、[GPS 失效模擬與驗證](m5-vla-gps-denied/m5-gps-failure-sim-validation.md)、[論文清單](m5-vla-gps-denied/m5-papers-reading-list.md)）。
+
 ---
 
 ## 5. 頂會與追蹤管道

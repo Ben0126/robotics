@@ -125,6 +125,17 @@
 | [m4-ros2-swarm-tooling.md](m4-swarm-collision-avoidance/m4-ros2-swarm-tooling.md) | M4③ ROS2 群飛工具鏈（Crazyswarm2、PX4 multi-vehicle、DDS 擴展性、QoS） |
 | [m4-papers-reading-list.md](m4-swarm-collision-avoidance/m4-papers-reading-list.md) | M4④ 產出物：群飛/避碰必讀論文清單（含難度、為何讀） |
 
+**[m5-vla-gps-denied/](m5-vla-gps-denied/) — Module 5：單機 GPS-denied VLA 無人機（延伸主題 · 團隊技術報告）**
+
+> 單機四相機（前/左/右/下）、無 GPS、以 VLA 自主搜索特定目標並避障的專案研究：訓練環境/資料集如何有效建構、用什麼取代 GPS 定位、GPS 失效如何在模擬中重現與驗證。三份業界導向技術報告（繁中正文＋英文摘要）＋論文清單。
+
+| 檔案 | 內容 |
+|---|---|
+| [m5-vla-training-env-dataset.md](m5-vla-gps-denied/m5-vla-training-env-dataset.md) | M5① 技術報告：VLA 訓練環境與影像資料集建構（3DGS Real2Sim、模擬平台選型、Domain Randomization 與自動標註、資料集盤點）|
+| [m5-gps-denied-localization.md](m5-vla-gps-denied/m5-gps-denied-localization.md) | M5② 技術報告：GPS-denied 定位與導航替代方案（GPS 三層拆解、VIO 選型、四相機構型、衛星圖匹配、機載算力）|
+| [m5-gps-failure-sim-validation.md](m5-vla-gps-denied/m5-gps-failure-sim-validation.md) | M5③ 技術報告：GPS 失效的模擬與驗證方法（PX4 故障注入、VIO 漂移重現三法、驗證測試矩陣、failsafe 設計）|
+| [m5-papers-reading-list.md](m5-vla-gps-denied/m5-papers-reading-list.md) | M5④ 產出物：VLA 訓練/GPS-denied 必讀論文與資源清單（含難度、為何讀）|
+
 ---
 
 ## 🔄 版本與時效性備註（2026-06）
